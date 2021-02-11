@@ -1,0 +1,17 @@
+version:  "3"
+services:
+  ubuntu:
+    container_name: snort
+    hostname: snort
+    user: snort
+    working_dir: /home/snort/
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+    image: alkeldi/snort
+    environment: 
+      TERM: xterm-256color
+    volumes: 
+      - ./home:/home/snort
+    entrypoint: /bin/sh
+    tty: true
