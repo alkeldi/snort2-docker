@@ -4,6 +4,7 @@ services:
     container_name: snort
     hostname: snort
     user: snort
+    network_mode: host
     working_dir: /home/snort/
     build: 
       context: ./
@@ -12,6 +13,12 @@ services:
     environment: 
       TERM: xterm-256color
     volumes: 
-      - ./home:/home/snort
+      - snort_data:/etc/snort
+      - snort_home:/home/snort/
     entrypoint: /bin/sh
     tty: true
+
+volumes:
+  snort_data:
+  snort_home:
+  
