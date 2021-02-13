@@ -15,10 +15,11 @@ services:
     volumes: 
       - snort_data:/etc/snort
       - snort_home:/home/snort/
+      - snort_logs:/var/log/snort/
     entrypoint: /bin/sh
     tty: true
 
 volumes:
   snort_data:
   snort_home:
-  
+  snort_logs:

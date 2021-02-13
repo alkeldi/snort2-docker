@@ -12,6 +12,7 @@ RUN apt-get clean -y\
     && echo 'snort:snort' | chpasswd\
     && apt-get install net-tools -y\
     && apt-get install iputils-ping -y\
+    && apt-get install tmux -y\
     && apt-get install -y build-essential autotools-dev libdumbnet-dev\
         libluajit-5.1-dev libpcap-dev libpcre3-dev zlib1g-dev pkg-config\
         libhwloc-dev bison flex zlib1g-dev liblzma-dev openssl libssl-dev\
